@@ -1,0 +1,382 @@
+:root {
+  --bg-color: #0b1120;
+  --card-bg: rgba(30, 41, 59, 0.85);
+  --card-border: #334155;
+  --primary: #38bdf8;
+  --primary-hover: #0284c7;
+  --accent: #38bdf8;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  background: radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.15), transparent 70%);
+}
+
+.badge {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin: 1.2rem 0 0.5rem;
+  color: #ffffff;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.role-text {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #0b1120;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  color: #ffffff;
+}
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+/* Card Styling */
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* Sections */
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 50%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Skills Section */
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.skill-item i {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Contact Section & Info Pills */
+.contact-container {
+  text-align: center;
+}
+
+.contact-desc {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 1.6rem;
+  background: #1e293b; 
+  border: 1px solid #475569;
+  border-radius: 50px;
+  color: #ffffff !important; 
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contact-pill i {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.contact-pill:hover {
+  border-color: var(--accent);
+  background: #334155;
+  transform: translateY(-2px);
+}
+
+.contact-pill.whatsapp i {
+  color: #25d366;
+}
+
+.contact-pill.whatsapp:hover {
+  border-color: #25d366;
+}
+
+.contact-pill.email i {
+  color: #f87171;
+}
+
+.contact-pill.email:hover {
+  border-color: #f87171;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--card-border);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .contact-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* Hero Section Profile Photo Styling */
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* Photo aur text ke beech space */
+}
+
+.hero-profile-photo {
+  width: 150px; /* Photo ki width (Size adjust kar sakte hain) */
+  height: 150px; /* Photo ki height */
+  object-fit: cover; /* Photo crop na ho aur container mein adjust ho jaye */
+  border-radius: 50%; /* Photo ko circular (Gol) banane ke liye */
+  border: 4px solid rgba(56, 189, 248, 0.2); /* Photo ke charon taraf border */
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); /* Photo ke peeche glowing effect */
+}
+
+/* Mobile responsive fix */
+@media (max-width: 768px) {
+  .hero-profile-photo {
+    width: 120px; /* Mobile par photo thodi choti karne ke liye */
+    height: 120px;
+  }
+}
+/* Profile Photo Design */
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero-profile-photo {
+    width: 115px;
+    height: 115px;
+  }
+}
+/* Typing Animation Cursor */
+.cursor {
+  font-weight: 300;
+  color: var(--accent);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
